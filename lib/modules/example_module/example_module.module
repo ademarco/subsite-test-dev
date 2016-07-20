@@ -4,3 +4,15 @@
  * @file
  * Hic sunt dracones.
  */
+
+/**
+ * Implements hook_init().
+ */
+function example_module_init() {
+  if (!class_exists('GuzzleHttp\Client')) {
+    drupal_set_message('Class "GuzzleHttp\Client" not found.', 'error');
+  }
+  else {
+    drupal_set_message('Class "GuzzleHttp\Client" has been found.', 'status');
+  }
+}
