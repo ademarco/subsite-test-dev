@@ -15,3 +15,5 @@ build/
 platform/
 tmp/
 vendor/
+
+build.properties
