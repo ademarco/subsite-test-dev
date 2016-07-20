@@ -15,4 +15,17 @@ function example_module_init() {
   else {
     drupal_set_message('Class "GuzzleHttp\Client" has been found.', 'status');
   }
+
+  // First attempt: sub-site on production.
+  if (conf_path() != 'sites/default' && file_exists(DRUPAL_ROOT . '/' . conf_path() . '/vendor/autoload.php')) {
+    drupal_set_message('First attempt: sub-site on production.');
+  }
+  // Second attempt: sub-site in development.
+  elseif (file_exists(DRUPAL_ROOT . '/sites/all/vendor/autoload.php')) {
+    drupal_set_message('Second attempt: sub-site in development.');
+  }
+  // Third attempt: Fallback to platform autoload.php, if any.
+  elseif (file_exists(DRUPAL_ROOT . '/vendor/autoload.php')) {
+    drupal_set_message('Third attempt: Fallback to platform autoload.php, if any.', 'error');
+  }
 }
