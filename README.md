@@ -1,5 +1,7 @@
 # NextEuropa Subsite Starterkit
 
+**Version:** 2.0.0
+
 ```
 T                                    \`.    T
 |    T     .--------------.___________) \   |    T
@@ -117,3 +119,5 @@ This README is divided in different parts, please read the relevant section:
    your own project.
 5. [Contributing](docs/contributing.md): How to contribute bugfixes and
    new features to the Subsite Starterkit.
+6. [Upgrading from 1.0.x to 2.0.x](docs/upgrading.md): How to upgrade to the
+   2.0.x and enjoy full Composer support.
